@@ -1,0 +1,11 @@
+html
+	head
+		title Burnt Toast
+	- if (typeof(bodyClasses) == 'undefined')
+		- bodyClasses = ""
+	body(class=bodyClasses)
+		#header
+			h1 Burnt Toast
+		#wrapper
+			#content!= body
+			#footer

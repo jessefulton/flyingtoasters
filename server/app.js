@@ -25,7 +25,8 @@ app.configure(function () {
 	app.set('views', __dirname+"/views");
 
 	app.set('view engine', 'jade');
-
+	app.set('view options', { pretty: true });
+	 
 	function compile (str, path) {
 		return stylus(str)
 			.set('filename', path)
@@ -46,13 +47,6 @@ app.configure('production', function(){
 });
 
 
-
-/**
- * GET serve when already rasterized.
- */
-app.get('/', function(req,res) {
-	res.end("hello world");
-});
 
 
 require('./routes').init(app);

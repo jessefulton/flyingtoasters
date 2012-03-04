@@ -85,7 +85,7 @@ $(function() {
 			state = states.idle;
 			stopCounter();
 			window._PAUSED = false;
-			window.setTimeout(function() {$("#application-container").show()}, 200);
+			window.setTimeout(function() {$("#application-container").fadeIn(800)}, 200);
 			//load bootstrap.js
 		}
 	
@@ -93,7 +93,7 @@ $(function() {
 			console.log("STOPPING SCREENSAVER");
 			startCounter();
 			window._PAUSED = true;
-			window.setTimeout(function() {$("#application-container").hide()}, 200);
+			window.setTimeout(function() {$("#application-container").fadeOut(200)}, 200);
 		}
 	
 		init();

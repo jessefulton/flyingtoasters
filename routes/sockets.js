@@ -6,15 +6,21 @@ exports.init = function(app) {
     var io = require('socket.io').listen(app);
     var User = require('../user.js');
 	io.set('log level', 1);
-	
-	
-	io.set('transports', [
-		'websocket'
-		, 'flashsocket'
-		, 'htmlfile'
-		, 'xhr-polling'
-		, 'jsonp-polling'
-	]);
+	if (env.process == "production") {
+		io.configure(function () { 
+		  io.set("transports", ["xhr-polling"]); 
+		  io.set("polling duration", 10); 
+		});
+	}
+	else {
+		io.set('transports', [
+			'websocket'
+			, 'flashsocket'
+			, 'htmlfile'
+			, 'xhr-polling'
+			, 'jsonp-polling'
+		]);
+	}	
 	
     var socketPool = [];
     

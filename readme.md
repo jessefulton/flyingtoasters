@@ -1,3 +1,4 @@
-# Read Me #
+Burnt Toast (or something)
+-----------------
 
-Add descriptions...
+A networked homage to the screen saver of yesteryear

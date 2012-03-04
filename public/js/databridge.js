@@ -1,13 +1,26 @@
-
+	var userID = null;
     var serverURL = window.location;
     console.log(serverURL);
-    var socket = io.connect(serverURL);
+    var socket = io.connect(serverURL, {
+	  'reconnect': true,
+	  'reconnection delay': 500,
+	  'max reconnection attempts': 10
+	});
+    
 	console.log("Socket Connected");
     // handle events from server
     socket.on('join', function (user) {
         // a user has joined the flock
         // add them to the scene
-        window.dataBridge.messageToasterManager("join", {"userid": "foo"});
+        console.log(user.id);
+        window.dataBridge.messageToasterManager("join", {user});
+    });
+    
+    socket.on('userID', function(userID) {
+    	//only set userID once
+    	if (!userID) {
+	    	userID = userID;
+	    }
     });
     
     //socket.on('otherJoined', function(msg) { alert(msg); });

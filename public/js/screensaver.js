@@ -1,4 +1,4 @@
-( function ($) {
+$(function() {
 
     //vars	
 	var state, counterID;	
@@ -9,12 +9,14 @@
 		'untouched': 1,
 		'active': 2,
 		'idle': 3
-	];
+	};
+	
+	//TODO: we may want to limit the mousemove event (using setTimeout)
 	var interactionEvents = [
-		'mouseMove',
-		'mouseDown',
-		'mouseUp',
-		'keyDown'
+		'mousemove',
+		'mousedown',
+		//'mouseup',
+		'keydown'
 	];
 
 
@@ -24,19 +26,22 @@
 
 		// register event listeners
 		interactionEvents.forEach( function (eventName) {
-			$.on(eventName, interact); // ???
+			console.log(eventName);
+			$(document.body).on(eventName, interact); // ???
 		});
+		startCounter();
 	}
 
 	var interact = function() {
+		console.log(state);
 		if ( state == states.untouched ) {
-			state = states.active;
 			startCounter();
 		} else if ( state == states.active ) {
 			resetCounter();
 		} else if ( state == states.idle ) {
 			endScreenSaver();
 		}
+		state = states.active;
 	};
 
 	var startCounter = function() {
@@ -44,16 +49,25 @@
 	}
 
 	var resetCounter = function() {
-		clearTimeout(counterId);
+		stopCounter();
 		startCounter();
+	}
+	
+	var stopCounter = function() {
+		clearTimeout(counterID);
 	}
 
 	var startScreenSaver = function () {
+		console.log("STARTING SCREENSAVER");
+		state = states.idle;
+		stopCounter();
 		//load bootstrap.js
 	}
 
 	var endScreenSaver = function () {
+		console.log("STOPPING SCREENSAVER");
+		startCounter();
 	}
 
 	init();
-})($);
+});

@@ -34,6 +34,8 @@ exports.init = function(app) {
         var user; // assosciate a user with each socket connetion
         console.log("connected " + socket.id);
 
+
+
 		socket.emit('join');
 		//socket.broadcast.emit('otherJoined', "a new person joined");
 
@@ -47,6 +49,7 @@ exports.init = function(app) {
 
             user = new User(userData);          
             socketPool[user.id] = user;
+            socket.emit('userID', user.id);
             fanOut('join', user);
         });
         
@@ -54,5 +57,20 @@ exports.init = function(app) {
             delete socketPool[user.id];
 			fanOut('left', user);
 		});
+		
+		
+		socket.on('disconnect', function() {
+			console.log("disconnect " + socket.id);
+		});
+		
+		socket.on('reconnect', function(transport_type,reconnectionAttempts) {
+			console.log('reconnect ' + socket.id);
+
+		});
+
+		socket.on('reconnecting', function(reconnectionDelay,reconnectionAttempts) {
+			console.log('reconnecting ' + socket.id);
+		});
+		
     });
 }; 

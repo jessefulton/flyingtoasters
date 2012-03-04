@@ -6,17 +6,14 @@
     <script src="/js/screensaver.js"></script>
     <script>
     	//setup timeout interval - wait 3 seconds then load bootstrap.js
-    	$(function() {
-	    	$("#about-icon").on('click', function() {
-    			$("#about").show();
-    		});
-    		$("#about .OK, #about .close").on('click', function() {
-    			$("#about").hide();
-    		});
-    	});
+
+    	
+    	//load bootstrap - on load, add body class "loaded"
+    	
     </script>
   </head>
   <body>
+  	<div id="startup"><div class="loading">LOADING</div></div>
 	<div id="desktop">
     	<div id="about-icon"></div>
     	<div id="about"><div class="OK"></div><div class="close"></div></div>
@@ -26,5 +23,48 @@
     	-->
     </div>
     <div id="bsod"><div class="bottom"></div></div>
+    
+    <script>
+
+		$(function() {
+			var nayGl = function() {
+				$(document.body).addClass("nogl");
+			}
+			
+			var initDesktop = function() {
+				$("#about-icon").on('click', function() {
+					$("#about").show();
+				});
+				$("#about .OK, #about .close").on('click', function() {
+					$("#about").hide();
+				});
+				$(document.body).addClass("loaded");	
+			}
+
+			var loadScene = function(cb) {
+				//load scene
+				//when loaded
+				cb();
+			}
+			
+			var yayGl = function() {
+				$(document.body).addClass("webgl");	
+				//loadScene(initDesktop);
+				window.setTimeout(function() {loadScene(initDesktop);}, 1000);
+			}
+		
+		
+			//Feature test WebGL
+			//via https://github.com/senchalabs/philogl/blob/master/src/webgl.js#L384-395			
+			try {
+				var canvas = document.createElement('canvas');
+				var hasGl = !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
+				if (hasGl) { yayGl(); }
+				else { nayGl(); }
+			} catch(e) {
+				nayGl();
+			}
+		});
+    </script>
   </body>
 </html>

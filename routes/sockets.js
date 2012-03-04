@@ -4,73 +4,66 @@
  
 exports.init = function(app) {
     var io = require('socket.io').listen(app);
-    var User = require('../user.js');
-	io.set('log level', 1);
-	if (process.env.NODE_ENV == "production") {
-		io.configure(function () { 
-		  io.set("transports", ["xhr-polling"]); 
-		  io.set("polling duration", 10); 
-		});
-	}
-	else {
-		io.set('transports', [
-			'websocket'
-			, 'flashsocket'
-			, 'htmlfile'
-			, 'xhr-polling'
-			, 'jsonp-polling'
-		]);
-	}	
-	
-    var socketPool = [];
-    
-    function fanOut(message, args) {
-        socketPool.forEach( function (user, i, arr) {
-            user.socket(message, args);
+    io.set('log level', 1);
+    if (process.env.NODE_ENV == "production") {
+        io.configure(function () { 
+          io.set("transports", ["xhr-polling"]); 
+          io.set("polling duration", 10); 
         });
     }
+    else {
+        io.set('transports', [
+            'websocket'
+            , 'flashsocket'
+            , 'htmlfile'
+            , 'xhr-polling'
+            , 'jsonp-polling'
+        ]);
+    }   
     
-	io.sockets.on('connection', function (socket) {    
-        var user; // assosciate a user with each socket connetion
-        console.log("connected " + socket.id);
-
-
-
-		socket.emit('join');
-		//socket.broadcast.emit('otherJoined', "a new person joined");
-
-		socket.on('connectedUsers', function(data, cb) {
-			console.log('received call "connectedUsers"');
-			cb();
-		});
-
-        socket.on('join', function (userData) {            
-            if (user) return; // already joined
-
-            user = new User(userData);          
-            socketPool[user.id] = user;
-            socket.emit('userID', user.id);
-            fanOut('join', user);
+    var users = [];
+    var generateId = (function (){
+        var counter = 1;
+        return function () { return counter++;};
+    });
+    
+    var disconnecting = [];
+    var timeToReconnect = 3000; // milliseconds
+    
+    io.sockets.on('connection', function (socket) {
+       console.log("connection " + socket.id);
+       
+       var id = generateId();
+        
+        var join = function(claimId, data) {            
+            var user = data;
+            
+            // listen and guard reconnects
+            if ((claimID != id) && (disconnecting[claimId])) { //new socket, old user, (reconnecting), ensure?
+                id = claimId;
+                clearTimeout(user.disconnecting);
+                delete disconnecting[id] == undefined;
+                return;
+            }            
+            
+            user.id = id;                
+            users[id] = user;            
+            socket.broadcast.emit('arrivalNotification', user);
+            
+            console.log('user #' + id + ' has joined');
+        }
+        
+        socket.emit('acknowledgeConnection', {'users':users, 'id': id}, join);        
+        
+        socket.on('disconnect', function() {
+            console.log("disconnect " + socket.id);
+            
+            // dont tell everyone right away, give them a second to reconnect
+            disconnecting[id] = setTimeout(timeToReconnect, function () {                
+                socket.broadcast.emit('departureNotification', users[id]);
+                delete users[id];
+            });
         });
         
-		socket.on('leave', function (user) {
-            delete socketPool[user.id];
-			fanOut('left', user);
-		});
-		
-		
-		socket.on('disconnect', function() {
-			console.log("disconnect " + socket.id);
-		});
-		
-		socket.on('reconnect', function(transport_type,reconnectionAttempts) {
-			console.log('reconnect ' + socket.id);
-
-		});
-
-		socket.on('reconnecting', function(reconnectionDelay,reconnectionAttempts) {
-			console.log('reconnecting ' + socket.id);
-		});
-		
     });
 }; 

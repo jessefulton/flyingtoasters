@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="/js/audiolet/Audiolet.min.js"></script>
+    <script src="/js/audiolet/audiofile.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>var socket = io.connect('');
+
+//are these built-ins? can we override more elegantly?
+socket.on('foo', function () {
+ console.log("received foo");
+  socket.emit('sign in', 'i am here', function (err) {
+   if (err) {
+
+   }
+   else {
+    socket.emit('join queue');
+   }
+  });
+
+});
+socket.on('reconnect', function() {});
+socket.on('reconnecting', function() {});
+socket.on('error', function() {});
+
+</script>
+    <script src="/js/load-theme-song.js"></script>
+  </head>
+  <body>
+    
+    
+  </body>
+</html>

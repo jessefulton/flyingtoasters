@@ -1,4 +1,3 @@
 .DS_Store
 server/node_modules
-server/public/stylesheets/.*\.css$
 server/public/toasters

@@ -8,11 +8,8 @@ pc.script.create("soundtrack", function (context) {
     };
 
     SoundTrack.prototype.update = function (dt) {
-    	//console.log(dt);
-    	//console.log(!!window._PAUSED);
     	if (!!window._PAUSED) {
 			if (this.playing) {
-				console.log('pausing');
 				context.systems.audiosource.pause(this.entity, 'FlyingToastersTheme.ogg');
 				this.playing = false;
 			}

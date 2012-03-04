@@ -2,7 +2,7 @@ $(function() {
 	var AudioletApp = function() {
 		this.audiolet = new Audiolet();
 		// Amen break is 138 BPM
-		this.audiolet.scheduler.setTempo(138);
+		//this.audiolet.scheduler.setTempo(100);
 
 		// Create an empty buffer
 		this.amen = new AudioletBuffer(1, 0);

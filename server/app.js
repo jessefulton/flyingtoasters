@@ -1,6 +1,4 @@
-var express = require('express')
-	, stylus = require('stylus')
-	, nib = require('nib');
+var express = require('express');
 
 var app = express.createServer();
 
@@ -8,30 +6,9 @@ var app = express.createServer();
  * App configuration.
  */
 app.configure(function () {
-	app.use(stylus.middleware({ src: __dirname + '/public', compile: compile }))
-	app.use(express.static(__dirname + '/public'));
 	app.use(express.bodyParser());
 	app.use(express.favicon());
-
-	// "app.router" positions our routes 
-	// above the middleware defined below,
-	// this means that Express will attempt
-	// to match & call routes _before_ continuing
-	// on, at which point we assume it's a 404 because
-	// no route has handled the request.
-	
 	app.use(app.router);
-
-	app.set('views', __dirname+"/views");
-
-	app.set('view engine', 'jade');
-	app.set('view options', { pretty: true });
-	 
-	function compile (str, path) {
-		return stylus(str)
-			.set('filename', path)
-			.use(nib());
-	};
 });
 
 app.configure('development', function(){
@@ -45,7 +22,6 @@ app.configure('production', function(){
   app.use(express.static(__dirname + '/public', { maxAge: oneYear }));
   app.use(express.errorHandler());
 });
-
 
 
 

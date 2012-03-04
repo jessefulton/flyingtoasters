@@ -324,6 +324,7 @@ pc.extend(pc, function () {
     
         this.div.appendChild(this.bar);
         element.appendChild(this.div);  
+        this.setVisible(false);
     };
     
     ProgressBar.prototype.setVisible = function (visible) {

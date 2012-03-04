@@ -39,14 +39,14 @@ exports.init = function(app) {
             var user = data;
             
             // listen and guard reconnects
-            if ((claimID != id) && (disconnecting[claimId])) { //new socket, old user, (reconnecting), ensure?
+            if ((claimId != id) && (disconnecting[claimId])) { //new socket, old user, (reconnecting), ensure?
                 id = claimId;
                 clearTimeout(user.disconnecting);
                 delete disconnecting[id] == undefined;
                 return;
             }            
             
-            user.id = id;                
+            user.id = id;
             users[id] = user;            
             socket.broadcast.emit('arrivalNotification', user);
             

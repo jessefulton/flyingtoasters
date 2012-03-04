@@ -11,8 +11,11 @@
     // handle events from server
     
     
-    socket.on('acknowlegeConnection', function (givenId, respond) {
-         window.dataBridge.messageToasterManager("joinRequest", givenId, respond);
+    socket.on('acknowledgeConnection', function (user, respond) {
+
+    	//TODO: check if user.id already present
+    	respond(user.id, {});
+         //window.dataBridge.messageToasterManager("joinRequest", givenId, respond);
     });
     
     socket.on('arrivalNotification', function (user) {

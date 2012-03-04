@@ -2,8 +2,10 @@
 <html>
   <head>
     <link href="/stylesheets/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="/js/whereAreWe.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/databridge.js"></script>
 	<script src="http://code.playcanvas.com/playcanvas-0.40.0.min.js"></script>
 	<script>
 		var uri = new pc.URI(window.location.href);
@@ -25,27 +27,7 @@
 	</script>
 	<script src="data.js"></script>
 
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-    	var socketUrl = "?";
-		var socket = io.connect(socketUrl);
-	
-		//are these built-ins? can we override more elegantly?
-		socket.on('userMap', function (data) {
-			//sendToasterData("userMap", data);
-			
-		});
-		
-		var sendToasterData = null;
-		window.setToasterListener = function(fn) {
-			sendToasterData = fn;
-		};
-		
-		window.messageServer = function(msg, cb) {
-			socket.emit(msg, cb);
-		};
-		
-	</script>
+
 
 	<!--
     <script src="/js/audiolet/Audiolet.min.js"></script>

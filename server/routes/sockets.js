@@ -26,7 +26,14 @@ exports.init = function(app) {
     
 	io.sockets.on('connection', function (socket) {    
         var user; // assosciate a user with each socket connetion
-        
+        console.log("connected " + socket.id);
+
+		socket.emit('join');
+
+		socket.on('connectedUsers', function(data, cb) {
+			console.log('received call "connectedUsers"');
+			cb();
+		});
 
         socket.on('join', function (userData) {            
             if (user) return; // already joined

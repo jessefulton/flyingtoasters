@@ -1,4 +1,17 @@
+//this is the variable where the users location is stored.
 var whereAreWe = {};
+
+/*
+this is a prototype I use for less ugly variable interpolation in strings. 
+this is an example:
+"I am {foo} and {bar}"
+	.supplant(
+		{
+			foo:"Evan",
+			bar:"not a salmon"
+		}
+	)
+*/
 String.prototype.supplant = function (o) {
 	return this.replace(/{([^{}]*)}/g,
 	function (a, b) {
@@ -9,9 +22,12 @@ String.prototype.supplant = function (o) {
 function buildFlag(){
 	whereAreWe.flag = "http://www.geognos.com/api/en/countries/flag/"+whereAreWe.cc+".png"
 }
+//This is the function that is called when the location is discovered. 
 function run(){
 	console.log(whereAreWe)
 }
+
+//this is the function called when the user does not/ cannot use html5 geolocation
 function noGeoLocation(){
 	o = {myIp: "324234" }
 	$.ajax({
@@ -31,6 +47,13 @@ function noGeoLocation(){
 		}
 	})
 }
+
+//find me is the function called when you want to find the user
+//if called with out the argument, then it finds the user. 
+//If an argument is passed, then it fakes a country. 
+//findMe() returns the user
+//findMe(true) //returns a random country
+//findMe("IN") //returns India.    
 function findMe(fakeIt){
 	if(fakeIt===undefined){
 		if (navigator.geolocation) {

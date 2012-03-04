@@ -6,7 +6,7 @@ exports.init = function(app) {
     var io = require('socket.io').listen(app);
     var User = require('../user.js');
 	io.set('log level', 1);
-	if (env.process == "production") {
+	if (process.env == "production") {
 		io.configure(function () { 
 		  io.set("transports", ["xhr-polling"]); 
 		  io.set("polling duration", 10); 

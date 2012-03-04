@@ -1,5 +1,5 @@
 window._LOADED = false;
-window._PAUSED = false;
+window._PAUSED = true;
 window.playCanvasStatus = function(s) {
 	if (s >= 100) {
 		_LOADED = true;
@@ -50,7 +50,6 @@ $(function() {
 	
 			// register event listeners
 			interactionEvents.forEach( function (eventName) {
-				console.log(eventName);
 				$(document.body).on(eventName, interact); // ???
 			});
 			startCounter();
@@ -67,8 +66,8 @@ $(function() {
 			state = states.active;
 		};
 	
-		var startCounter = function() {
-			counterID = setTimeout(startScreenSaver, waitTime);
+		var startCounter = function(t) {
+			counterID = setTimeout(startScreenSaver, t ? t : waitTime);
 		}
 	
 		var resetCounter = function() {
@@ -81,7 +80,7 @@ $(function() {
 		}
 	
 		var startScreenSaver = function () {
-			console.log("STARTING SCREENSAVER");
+			//console.log("STARTING SCREENSAVER");
 			state = states.idle;
 			stopCounter();
 			window._PAUSED = false;
@@ -90,7 +89,7 @@ $(function() {
 		}
 	
 		var endScreenSaver = function () {
-			console.log("STOPPING SCREENSAVER");
+			//console.log("STOPPING SCREENSAVER");
 			startCounter();
 			window._PAUSED = true;
 			window.setTimeout(function() {$("#application-container").fadeOut(200)}, 200);
@@ -104,6 +103,7 @@ $(function() {
 		var boot = window.setInterval(function() {
 			if (_LOADED) {
 				window.clearInterval(boot);
+				$("#application-container").hide();
 				cb();
 				console.log('\n');
 				console.log('**************************');

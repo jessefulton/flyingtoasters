@@ -13,7 +13,7 @@
         // a user has joined the flock
         // add them to the scene
         console.log(user.id);
-        window.dataBridge.messageToasterManager("join", {user});
+        window.dataBridge.messageToasterManager("join", user);
     });
     
     socket.on('userID', function(userID) {

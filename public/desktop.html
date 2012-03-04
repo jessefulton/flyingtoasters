@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/js/screensaver.js"></script>
+    <script>
+    	//setup timeout interval - wait 3 seconds then load bootstrap.js
+    	$(function() {
+	    	$("#about-icon").on('click', function() {
+    			$("#about").show();
+    		});
+    		$("#about .OK, #about .close").on('click', function() {
+    			$("#about").hide();
+    		});
+    	});
+    </script>
+  </head>
+  <body>
+	<div id="desktop">
+    	<div id="about-icon"></div>
+    	<div id="about"><div class="OK"></div><div class="close"></div></div>
+		<!--
+    	<div id="file-mgr"></div>
+    	<div id="notepad"></div>
+    	-->
+    </div>
+    <div id="bsod"><div class="bottom"></div></div>
+  </body>
+</html>

@@ -6,6 +6,8 @@ pc.script.create("network_events", function (context) {
     };
 
     NetworkEvents.prototype.initialize = function () {
+		window.dataBridge.registerJoinListener(this.join);
+		window.dataBridge.registerLeaveListener(this.leave);
     };
 
     NetworkEvents.prototype.join = function () {
@@ -15,6 +17,9 @@ pc.script.create("network_events", function (context) {
     NetworkEvents.prototype.leave = function () {
         context.systems.audio.play('leave.wav');
     };
+
+
+
 
     NetworkEvents.prototype.update = function (dt) {
     };

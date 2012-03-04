@@ -19,12 +19,15 @@
         // a user has joined the flock
         // add them to the scene
         //console.log(user.id);
-        window.dataBridge.messageToasterManager("someoneJoined", user);
+        console.log('arrival notification');
+        window.dataBridge.joinListener(); //messageToasterManager("someoneJoined", user);
     });
     
     socket.on('departureNotification', function (user) {
         // user is who left, and their info
         // nix their toaster from the scene
+        console.log('departure notification');
+        window.dataBridge.leaveListener(); //messageToasterManager("someoneJoined", user);
     });
     
     /*
@@ -39,11 +42,19 @@
     
     */
 
-
+	//the listeners are durrrrrtay...
     window.dataBridge = {
         'messageToasterManager': function() {},
+        'joinListener': function() {},
+        'leaveListener': function() {},
         'registerMessageToasterManagerListener': function(fn) {
             window.dataBridge.messageToasterManager = fn;
+        },
+        'registerJoinListener': function(fn) {
+            window.dataBridge.joinListener = fn;
+        },
+        'registerLeaveListener': function(fn) {
+            window.dataBridge.leaveListener = fn;
         },
         'messageServer': function(message, data, cb) {
             console.log("messaging server " + message);

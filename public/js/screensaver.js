@@ -1,4 +1,5 @@
-var _LOADED = false;
+window._LOADED = false;
+window._PAUSED = false;
 window.playCanvasStatus = function(s) {
 	if (s >= 100) {
 		_LOADED = true;
@@ -56,7 +57,6 @@ $(function() {
 		}
 	
 		var interact = function() {
-			console.log(state);
 			if ( state == states.untouched ) {
 				startCounter();
 			} else if ( state == states.active ) {
@@ -84,14 +84,16 @@ $(function() {
 			console.log("STARTING SCREENSAVER");
 			state = states.idle;
 			stopCounter();
-			$("#application-container").show();
+			window._PAUSED = false;
+			window.setTimeout(function() {$("#application-container").show()}, 200);
 			//load bootstrap.js
 		}
 	
 		var endScreenSaver = function () {
 			console.log("STOPPING SCREENSAVER");
 			startCounter();
-			$("#application-container").hide();
+			window._PAUSED = true;
+			window.setTimeout(function() {$("#application-container").hide()}, 200);
 		}
 	
 		init();

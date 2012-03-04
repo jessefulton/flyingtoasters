@@ -96,3 +96,5 @@ function findMe(fakeIt){
 		buildFlag()
 	}
 }
+
+findMe();

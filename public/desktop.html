@@ -3,6 +3,8 @@
   <head>
     <link href="/stylesheets/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/databridge.js"></script>
     <script src="/js/screensaver.js"></script>
     <script>
     	//setup timeout interval - wait 3 seconds then load bootstrap.js
@@ -11,6 +13,27 @@
     	//load bootstrap - on load, add body class "loaded"
     	
     </script>
+	<script src="http://code.playcanvas.com/playcanvas-0.40.0.min.js"></script>
+	<script>
+		var uri = new pc.URI(window.location.href);
+		var query = uri.getQuery();
+
+		pc.config = pc.config || {};
+		pc.config['bootstrap'] = {
+		};
+		
+			pc.config['bootstrap']['useApi'] = false;
+			pc.config['bootstrap']['entity'] = "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f";
+		
+					   
+		if (query.w && query.h) {
+			pc.config['bootstrap']['width'] = query.w;
+			pc.config['bootstrap']['height'] = query.h;
+			pc.config['bootstrap']['resize'] = false;
+		}
+	</script>
+	<script src="data.js"></script>
+	
   </head>
   <body>
   	<div id="startup"><div class="loading">LOADING</div></div>
@@ -25,7 +48,13 @@
     <div id="bsod"><div class="bottom"></div></div>
     
     <script>
-
+    	var _LOADED = false;
+		window.playCanvasStatus = function(s) {
+			if (s >= 100) {
+				_LOADED = true;
+			}
+		}
+		
 		$(function() {
 			var nayGl = function() {
 				$(document.body).addClass("nogl");
@@ -38,13 +67,23 @@
 				$("#about .OK, #about .close").on('click', function() {
 					$("#about").hide();
 				});
-				$(document.body).addClass("loaded");	
+				$(document.body).addClass("loaded");
+
 			}
 
 			var loadScene = function(cb) {
-				//load scene
-				//when loaded
-				cb();
+				jQuery.getScript("/bootstrap.js");
+				var boot = window.setInterval(function() {
+					if (_LOADED) {
+						window.clearInterval(boot);
+						cb();
+						console.log('\n');
+						console.log('**************************');
+						console.log('loaded');
+						console.log('**************************');
+						console.log('\n');
+					}
+				}, 250);
 			}
 			
 			var yayGl = function() {

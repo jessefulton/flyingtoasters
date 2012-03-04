@@ -61,12 +61,14 @@ $(function() {
 		console.log("STARTING SCREENSAVER");
 		state = states.idle;
 		stopCounter();
+		$("#application-container").show();
 		//load bootstrap.js
 	}
 
 	var endScreenSaver = function () {
 		console.log("STOPPING SCREENSAVER");
 		startCounter();
+		$("#application-container").hide();
 	}
 
 	init();

@@ -105,5 +105,8 @@ body {
 	background: #aaaaaa url('/images/bsod-bottom.png') no-repeat 0 50%;
 }
 
+
+#application-container { display: none; }
+
 .webgl #bsod { display:none; }
 .nogl #bsod { display:block; }

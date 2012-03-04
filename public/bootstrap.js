@@ -58,6 +58,7 @@ pc.extend(pc, function () {
         } else {
             this._startFromData();
         }
+        
     };
     
     /**
@@ -180,6 +181,11 @@ pc.extend(pc, function () {
             }
         }, function (progress) {
             progressBar.setValue(progress);
+                    
+			try {
+				window.playCanvasStatus(progress);
+			}
+			catch(e) {}
         });
 
     };

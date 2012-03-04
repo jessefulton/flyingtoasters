@@ -11,11 +11,14 @@ pc.script.create("network_events", function (context) {
     };
 
     NetworkEvents.prototype.join = function () {
-        context.systems.audio.play('join.wav');
+    	console.log("join.wav");
+    	console.log(this.entity);
+        context.systems.audiosource.play(this.entity, 'join.wav');
     };
 
     NetworkEvents.prototype.leave = function () {
-        context.systems.audio.play('leave.wav');
+    	console.log("leave.wav");
+        context.systems.audiosource.play(this.entity, 'leave.wav');
     };
 
 

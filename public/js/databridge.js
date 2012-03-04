@@ -23,7 +23,9 @@
         // add them to the scene
         //console.log(user.id);
         console.log('arrival notification');
-        window.dataBridge.joinListener(); //messageToasterManager("someoneJoined", user);
+        //window.dataBridge.joinListener(); //messageToasterManager("someoneJoined", user);
+        var toaster = application.context.root.findByName('Toaster');
+        application.context.systems.script.message(toaster, 'network_events', 'join');
     });
     
     socket.on('departureNotification', function (user) {

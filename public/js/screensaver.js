@@ -10,19 +10,8 @@ $(function() {
 	var nayGl = function() {
 		$(document.body).addClass("nogl");
 	}
-	
-	var initDesktop = function() {
-		$("#about-icon").on('click', function() {
-			$("#about").show();
-		});
-		$("#about .OK, #about .close").on('click', function() {
-			$("#about").hide();
-		});
-		$(document.body).addClass("loaded");
-		screenSave();
-	}
 
-	var screenSave = function() {
+	var screenSave = (function() {
 	
 		//vars	
 		var state, counterID;	
@@ -52,12 +41,13 @@ $(function() {
 			interactionEvents.forEach( function (eventName) {
 				$(document.body).on(eventName, interact); // ???
 			});
-			startCounter();
+			//startCounter();
+			endScreenSaver();
 		}
 	
 		var interact = function() {
 			if ( state == states.untouched ) {
-				startCounter();
+				resetCounter();
 			} else if ( state == states.active ) {
 				resetCounter();
 			} else if ( state == states.idle ) {
@@ -67,6 +57,7 @@ $(function() {
 		};
 	
 		var startCounter = function(t) {
+			console.log("starting counter");
 			counterID = setTimeout(startScreenSaver, t ? t : waitTime);
 		}
 	
@@ -90,12 +81,25 @@ $(function() {
 	
 		var endScreenSaver = function () {
 			//console.log("STOPPING SCREENSAVER");
-			startCounter();
+			resetCounter();
 			window._PAUSED = true;
 			window.setTimeout(function() {$("#application-container").fadeOut(200)}, 200);
 		}
 	
-		init();
+		return {
+			"init" : init
+			};
+	})();
+	
+	var initDesktop = function() {
+		$("#about-icon").on('click', function() {
+			$("#about").show();
+		});
+		$("#about .OK, #about .close").on('click', function() {
+			$("#about").hide();
+		});
+		$(document.body).addClass("loaded");
+		screenSave.init();
 	}
 
 	var loadScene = function(cb) {

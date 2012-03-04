@@ -13,7 +13,7 @@
     
     socket.on('acknowlegeConnection', function (givenId, respond) {
          window.dataBridge.messageToasterManager("joinRequest", givenId, respond);
-    };
+    });
     
     socket.on('arrivalNotification', function (user) {
         // a user has joined the flock

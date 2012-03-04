@@ -102,7 +102,7 @@ html, body {
 }
 
 
-#application-container { display: none; }
+#application-container, .loaded #application-container { display: none; }
 
 .webgl #bsod { display:none; }
 .nogl #bsod { display:block; }

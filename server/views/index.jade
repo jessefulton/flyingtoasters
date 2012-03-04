@@ -1,1 +1,36 @@
-.intro hello world!
+doctype 5
+html
+	head
+		link(href='/stylesheets/style.css', rel='stylesheet')
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js')
+		script(src='/socket.io/socket.io.js')
+		script
+			var socket = io.connect('#{socketConnectUrl}');
+			
+			//are these built-ins? can we override more elegantly?
+			socket.on('foo', function () {
+				console.log("received foo");
+					socket.emit('sign in', 'i am here', function (err) {
+						if (err) {
+
+						}
+						else {
+							socket.emit('join queue');
+						}
+					});
+			});
+			socket.on('reconnect', function() {});
+			socket.on('reconnecting', function() {});
+			socket.on('error', function() {});
+
+
+	body
+		#dialog
+		#wrapper
+			#connecting
+				.wrap Game Loading
+			#queue
+				p.loading Looking for matches...
+				form#leave-queue
+					button Cancel

@@ -16,9 +16,12 @@ exports.init = function(app) {
 	
 
 	io.sockets.on('connection', function (socket) {
+		socket.emit('foo');
+		console.log("connection " + socket.id);
 		socket.on('disconnect', function () {
 			console.log('disconnect');
 			//let's wait 2 seconds to see if player reconnects
+			/*
 			setTimeout(function(){
 				console.log("Still disconnected? " + socket.connected + " " + socket.connecting);
 				if (!socket.connected && !socket.connecting) {
@@ -28,6 +31,7 @@ exports.init = function(app) {
 					//disconnectPlayer(socket);
 				}
 			}, 2000);
+			*/
 		});
 		
 

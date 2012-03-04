@@ -6,10 +6,10 @@ pc.content.data['application'] = {
 };
 pc.content.data["ad31b804-d834-460a-9ff4-6c6c0c5b0f2f"] = {
     "resource_id": "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f",
-    "_id": "a8107dc8-65b3-11e1-babb-fefdb24fbd4d",
+    "_id": "a702ccf2-6616-11e1-87a2-fefdb24fbd4d",
     "name": "toasters",
     "parent": null,
-    "children": ["8cb1975a-5166-406f-84a9-13066ce62736", "aff88709-9ccc-4820-b6a3-992d49edea5d", "124ed70c-2cde-43e0-8134-2d097e2c1c3a", "7f86afc3-2ea2-41a2-93af-5e2e53b287c5", "686718c7-d472-4fd1-a699-8d0638737da9", "87f2accf-2504-41af-a322-f152aead164c", "8ba19de3-d404-455a-ab2d-d19b839b77d5", "afdc11cf-7b4d-40f9-a6bc-7c77d67724df"],
+    "children": ["8cb1975a-5166-406f-84a9-13066ce62736", "aff88709-9ccc-4820-b6a3-992d49edea5d", "124ed70c-2cde-43e0-8134-2d097e2c1c3a", "7f86afc3-2ea2-41a2-93af-5e2e53b287c5", "87f2accf-2504-41af-a322-f152aead164c", "8ba19de3-d404-455a-ab2d-d19b839b77d5", "afdc11cf-7b4d-40f9-a6bc-7c77d67724df", "819e7207-9b9b-4b57-8384-622f3e9642e3"],
     "labels": [],
     "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0],
     "type": "entity",
@@ -18,19 +18,19 @@ pc.content.data["ad31b804-d834-460a-9ff4-6c6c0c5b0f2f"] = {
 };
 pc.content.data["8cb1975a-5166-406f-84a9-13066ce62736"] = {
     "resource_id": "8cb1975a-5166-406f-84a9-13066ce62736",
-    "_id": "b8d80b82-659d-11e1-890f-fefdb24fbd4d",
+    "_id": "beffd4bc-661b-11e1-8e93-fefdb24fbd4d",
     "name": "Camera",
     "parent": "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f",
     "children": [],
     "labels": [],
-    "transform": [0.70710678118654757, 0.0, -0.70710678118654746, 0.0, -0.49999999999999989, 0.70710678118654757, -0.5, 0.0, 0.5, 0.70710678118654746, 0.50000000000000011, 0.0, 10.0, 10.0, 10.0, 1.0],
+    "transform": [0.8191520442889918, 0.0, -0.57357643635104605, 0.0, -0.4055797876726388, 0.70710678118654757, -0.57922796533956911, 0.0, 0.40557978767263886, 0.70710678118654746, 0.57922796533956922, 0.0, 48.772628784179688, 30.171621322631836, 65.373054504394531, 1.0],
     "type": "entity",
     "subtype": "entity",
-    "components": {"camera": {"offscreen": false, "viewWindowX": 15, "viewWindowY": 10, "projection": 0, "clearColor": "0x000000ff", "fov": 45, "farClip": 500, "activate": true, "nearClip": 1}}
+    "components": {"camera": {"fov": 40, "viewWindowY": 10, "projection": 0, "viewWindowX": 15, "offscreen": false, "farClip": 500, "activate": true, "nearClip": 1, "clearColor": "0x000000ff"}}
 };
 pc.content.data["aff88709-9ccc-4820-b6a3-992d49edea5d"] = {
     "resource_id": "aff88709-9ccc-4820-b6a3-992d49edea5d",
-    "_id": "136fc210-659e-11e1-af99-fefdb24fbd4d",
+    "_id": "1df12414-65c0-11e1-9b9b-fefdb24fbd4d",
     "name": "Light",
     "parent": "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f",
     "children": [],
@@ -38,43 +38,31 @@ pc.content.data["aff88709-9ccc-4820-b6a3-992d49edea5d"] = {
     "transform": [0.11320611299365387, -0.82233162228803591, 0.55763346291806704, 0.0, 0.40372439390225667, 0.55089126176475189, 0.73042825210933282, 0.0, -0.90784965151126396, 0.14244128859416696, 0.39435959422145384, 0.0, 0.0, 5.305572509765625, 0.0, 1.0],
     "type": "entity",
     "subtype": "entity",
-    "components": {"directionallight": {"color": "0xffffff", "intensity": 1.6500000000000001, "enable": true, "castShadows": false}}
+    "components": {"directionallight": {"color": "0xffffff", "intensity": 1, "enable": true, "castShadows": false}}
 };
 pc.content.data["124ed70c-2cde-43e0-8134-2d097e2c1c3a"] = {
     "resource_id": "124ed70c-2cde-43e0-8134-2d097e2c1c3a",
-    "_id": "9e414e4c-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "bf298e06-661b-11e1-8e93-fefdb24fbd4d",
     "name": "Toasters",
     "parent": "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f",
     "children": ["02fc15d3-2875-4f05-84e6-eede1ecd94b4", "a982f434-aca6-4780-b975-b057ea1a66a7", "09e505c5-d403-4585-8ec3-95d95357f567", "d8b2d30e-25b9-4084-b116-7a2fe8b69030", "a32c51eb-437b-48f9-a098-7e8be7cc2e76", "611cb25a-a12e-4a71-9ad0-8c7df93015ab", "5af3159d-506a-440e-8af8-547b6ea79219", "e87ef3c7-efb4-4509-9c32-d319758fc0dc", "c6772e77-9734-4e97-b0de-b8d87e2a4a65", "bd6a693b-c9e7-465e-846a-0d62ec95a2e4", "2e51cbfb-a4fe-42ec-83e5-3161c1a7cef0", "19be455d-2eb2-439b-a339-2ab0c1dcc3da", "dab10b4b-73e9-4449-bf9a-0abb047dc1f4", "29bcec05-8a90-416f-adb5-ff6488139a8d", "d2fddaa8-2166-4af7-bb10-a487f0fd63ad", "dcef4026-48f6-4055-882c-87f5c129c890", "889c6cee-f544-4700-be71-e916b3205c0e", "59d67636-00ae-4307-b31b-33429e54ce55", "c89e8526-7c15-4fcc-904c-24d0bf730082", "8499b24b-6c5d-4ab2-842a-4435134a9909"],
     "labels": [],
-    "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+    "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, -4.063927173614502, -1.2202134132385254, 41.169864654541016, 1.0],
     "type": "entity",
     "subtype": "entity",
     "components": {}
 };
 pc.content.data["7f86afc3-2ea2-41a2-93af-5e2e53b287c5"] = {
     "resource_id": "7f86afc3-2ea2-41a2-93af-5e2e53b287c5",
-    "_id": "8aca4b8a-6587-11e1-8c3d-fefdb24fbd4d",
+    "_id": "fce6edec-661b-11e1-8e93-fefdb24fbd4d",
     "name": "Toast",
     "parent": "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f",
     "children": ["fdc20dff-630c-463b-ba46-5c1563899d82", "e8a3f713-27f1-487d-b295-2d5637294d31", "d4c7ca99-fb94-4d66-81d5-858e09482c25", "ac17a8d5-9762-409a-8927-978c603e6be6", "f6b2a2ff-0dc0-4046-aeb2-0fb9d61e429f", "cacc70ec-2853-4af8-917c-dd905e9d88f0", "b4f2cc94-8980-4ced-a987-80afa7297624", "a0baa8e9-a54a-4a20-9075-f268858c7b39", "fd60e73a-d513-42d5-b771-6a9b87a7c81d", "dbe6b438-bbe4-4b1d-be1a-38adf3379cc8", "b5e75f48-a4b5-4028-9c42-caca566f6929", "8431d2af-63ac-46b2-88d5-5f0c1736db5e", "ed729991-4159-46bd-9843-b54c5e94dc01", "5de6bf85-4d42-4e23-baa2-f1ea05441413", "a4335636-171e-4253-bd9a-731d2414eea5", "9fabddf2-9bdf-4b8c-bbc5-73c7a57547ad", "37a00f9f-1814-47b2-8715-a56623f4c2be", "846b2dbd-72fe-48eb-9f48-d7edb58c0f6d", "76d2135f-792b-4381-9cee-c3b052a469c6", "145e2904-17b5-4970-9163-72f3d49b242d"],
     "labels": [],
-    "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+    "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, -4.063927173614502, -1.2202134132385254, 41.169864654541016, 1.0],
     "type": "entity",
     "subtype": "entity",
     "components": {}
-};
-pc.content.data["686718c7-d472-4fd1-a699-8d0638737da9"] = {
-    "resource_id": "686718c7-d472-4fd1-a699-8d0638737da9",
-    "_id": "e0204b98-659b-11e1-8c3d-fefdb24fbd4d",
-    "name": "City",
-    "parent": "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f",
-    "children": [],
-    "labels": [],
-    "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, -50.0, -50.0, -50.0, 1.0],
-    "type": "entity",
-    "subtype": "entity",
-    "components": {"model": {"receiveShadows": true, "asset": "7b571b1c-6594-11e1-b889-fefdb24fbd4d", "castShadows": false}, "script": {"urls": "city_scroller.js"}}
 };
 pc.content.data["87f2accf-2504-41af-a322-f152aead164c"] = {
     "resource_id": "87f2accf-2504-41af-a322-f152aead164c",
@@ -90,7 +78,7 @@ pc.content.data["87f2accf-2504-41af-a322-f152aead164c"] = {
 };
 pc.content.data["8ba19de3-d404-455a-ab2d-d19b839b77d5"] = {
     "resource_id": "8ba19de3-d404-455a-ab2d-d19b839b77d5",
-    "_id": "35893ada-65a7-11e1-9155-fefdb24fbd4d",
+    "_id": "63d74624-65cb-11e1-b45a-fefdb24fbd4d",
     "name": "Audio Track",
     "parent": "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f",
     "children": [],
@@ -98,7 +86,7 @@ pc.content.data["8ba19de3-d404-455a-ab2d-d19b839b77d5"] = {
     "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0],
     "type": "entity",
     "subtype": "entity",
-    "components": {"audiosource": {"activate": true, "assets": ["fd184b3c-65a6-11e1-af99-fefdb24fbd4d"], "volume": 1, "rollOffFactor": 1, "minDistance": 1, "maxDistance": 10000, "loop": false, "3d": true}}
+    "components": {"audiosource": {"activate": true, "assets": ["fd184b3c-65a6-11e1-af99-fefdb24fbd4d"], "volume": 1, "rollOffFactor": 1, "minDistance": 1, "maxDistance": 10000, "loop": true, "3d": true}}
 };
 pc.content.data["afdc11cf-7b4d-40f9-a6bc-7c77d67724df"] = {
     "resource_id": "afdc11cf-7b4d-40f9-a6bc-7c77d67724df",
@@ -111,6 +99,18 @@ pc.content.data["afdc11cf-7b4d-40f9-a6bc-7c77d67724df"] = {
     "type": "entity",
     "subtype": "entity",
     "components": {"script": {"urls": "toaster_manager.js"}}
+};
+pc.content.data["819e7207-9b9b-4b57-8384-622f3e9642e3"] = {
+    "resource_id": "819e7207-9b9b-4b57-8384-622f3e9642e3",
+    "_id": "0e5ae006-6617-11e1-891c-fefdb24fbd4d",
+    "name": "City",
+    "parent": "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f",
+    "children": ["686718c7-d472-4fd1-a699-8d0638737da9", "1a4c01fa-c78a-48a6-9208-bf5cd3544c7b"],
+    "labels": [],
+    "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0],
+    "type": "entity",
+    "subtype": "entity",
+    "components": {"script": {"urls": "city_scroller.js"}}
 };
 pc.content.data["02fc15d3-2875-4f05-84e6-eede1ecd94b4"] = {
     "resource_id": "02fc15d3-2875-4f05-84e6-eede1ecd94b4",
@@ -354,7 +354,7 @@ pc.content.data["8499b24b-6c5d-4ab2-842a-4435134a9909"] = {
 };
 pc.content.data["fdc20dff-630c-463b-ba46-5c1563899d82"] = {
     "resource_id": "fdc20dff-630c-463b-ba46-5c1563899d82",
-    "_id": "3d455400-6586-11e1-9b57-fefdb24fbd4d",
+    "_id": "e86d8246-65ca-11e1-a1a6-fefdb24fbd4d",
     "name": "Toast",
     "parent": "7f86afc3-2ea2-41a2-93af-5e2e53b287c5",
     "children": [],
@@ -592,23 +592,29 @@ pc.content.data["145e2904-17b5-4970-9163-72f3d49b242d"] = {
     "subtype": "entity",
     "components": {"model": {"receiveShadows": true, "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d", "castShadows": false}, "script": {"urls": "boid.js"}}
 };
-pc.content.data["7b571b1c-6594-11e1-b889-fefdb24fbd4d"] = {
-    "resource_id": "7b571b1c-6594-11e1-b889-fefdb24fbd4d",
-    "_id": "7a4926e4-65b1-11e1-8a32-fefdb24fbd4d",
-    "name": "cityscape.json",
-    "subasset_files": ["7b7a85a2-6594-11e1-b889-fefdb24fbd4d", "7b87b088-6594-11e1-b889-fefdb24fbd4d", "7b94d718-6594-11e1-b889-fefdb24fbd4d", "7ba230e8-6594-11e1-b889-fefdb24fbd4d", "7baf53e0-6594-11e1-b889-fefdb24fbd4d", "7bbc8164-6594-11e1-b889-fefdb24fbd4d", "7bc9c25c-6594-11e1-b889-fefdb24fbd4d", "7bd6d320-6594-11e1-b889-fefdb24fbd4d", "7be422dc-6594-11e1-b889-fefdb24fbd4d", "7bf15858-6594-11e1-b889-fefdb24fbd4d", "7bfec39e-6594-11e1-b889-fefdb24fbd4d", "7c0bc968-6594-11e1-b889-fefdb24fbd4d", "7c18ca32-6594-11e1-b889-fefdb24fbd4d", "7c2615ac-6594-11e1-b889-fefdb24fbd4d", "7c33889a-6594-11e1-b889-fefdb24fbd4d", "7c40da54-6594-11e1-b889-fefdb24fbd4d", "7c4e3c94-6594-11e1-b889-fefdb24fbd4d", "7c5b6c98-6594-11e1-b889-fefdb24fbd4d", "7c689fb2-6594-11e1-b889-fefdb24fbd4d", "7c75ba12-6594-11e1-b889-fefdb24fbd4d", "7c82d59e-6594-11e1-b889-fefdb24fbd4d", "7c900c6e-6594-11e1-b889-fefdb24fbd4d", "7c9d32b8-6594-11e1-b889-fefdb24fbd4d", "7caa6bae-6594-11e1-b889-fefdb24fbd4d", "7cb7bcb4-6594-11e1-b889-fefdb24fbd4d", "7cc4e90c-6594-11e1-b889-fefdb24fbd4d", "7cd230a8-6594-11e1-b889-fefdb24fbd4d", "7cdf56b6-6594-11e1-b889-fefdb24fbd4d", "7cecba7c-6594-11e1-b889-fefdb24fbd4d", "7cf9dbd0-6594-11e1-b889-fefdb24fbd4d", "7d073f14-6594-11e1-b889-fefdb24fbd4d", "7d148c1e-6594-11e1-b889-fefdb24fbd4d", "7d21aaa2-6594-11e1-b889-fefdb24fbd4d", "7d2ec048-6594-11e1-b889-fefdb24fbd4d", "7d3bf146-6594-11e1-b889-fefdb24fbd4d", "7d491a74-6594-11e1-b889-fefdb24fbd4d", "7d5645be-6594-11e1-b889-fefdb24fbd4d", "7d63667c-6594-11e1-b889-fefdb24fbd4d", "7a7f61fa-65b1-11e1-8a32-fefdb24fbd4d"],
-    "subtype": "model",
-    "file": {
-        "resource_id": "7b6b95f6-6594-11e1-b889-fefdb24fbd4d",
-        "_id": "7b6b92ea-6594-11e1-b889-fefdb24fbd4d",    
-        "hash": "d40715768e7f67ba5b9062e3342b960d",
-        "exported": true,
-        "url": "assets/will/arthacksf/7b/7b571b1c-6594-11e1-b889-fefdb24fbd4d/cityscape.json",    
-        "asset": "7b571b1c-6594-11e1-b889-fefdb24fbd4d",    
-        "type": "file",    
-        "subtype": "model",    
-    },
-    "type": "asset"
+pc.content.data["686718c7-d472-4fd1-a699-8d0638737da9"] = {
+    "resource_id": "686718c7-d472-4fd1-a699-8d0638737da9",
+    "_id": "0f2b0024-6617-11e1-891c-fefdb24fbd4d",
+    "name": "Block1",
+    "parent": "819e7207-9b9b-4b57-8384-622f3e9642e3",
+    "children": [],
+    "labels": [],
+    "transform": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, -70.0, -70.0, -70.0, 1.0],
+    "type": "entity",
+    "subtype": "entity",
+    "components": {"model": {"receiveShadows": true, "asset": "7b571b1c-6594-11e1-b889-fefdb24fbd4d", "castShadows": false}}
+};
+pc.content.data["1a4c01fa-c78a-48a6-9208-bf5cd3544c7b"] = {
+    "resource_id": "1a4c01fa-c78a-48a6-9208-bf5cd3544c7b",
+    "_id": "4ded86f4-6619-11e1-b3b1-fefdb24fbd4d",
+    "name": "Block2",
+    "parent": "819e7207-9b9b-4b57-8384-622f3e9642e3",
+    "children": [],
+    "labels": [],
+    "transform": [6.1230317691118863e-17, 0.0, -1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 6.1230317691118863e-17, 0.0, 229.80000000000001, -70.0, -70.0, 1.0],
+    "type": "entity",
+    "subtype": "entity",
+    "components": {"model": {"receiveShadows": true, "asset": "7b571b1c-6594-11e1-b889-fefdb24fbd4d", "castShadows": false}}
 };
 pc.content.data["fd184b3c-65a6-11e1-af99-fefdb24fbd4d"] = {
     "resource_id": "fd184b3c-65a6-11e1-af99-fefdb24fbd4d",
@@ -630,7 +636,7 @@ pc.content.data["fd184b3c-65a6-11e1-af99-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -648,14 +654,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -666,7 +672,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -684,14 +690,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -702,7 +708,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -720,14 +726,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -738,7 +744,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -756,14 +762,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -774,7 +780,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -792,14 +798,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -810,7 +816,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -828,14 +834,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -846,7 +852,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -864,14 +870,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -882,7 +888,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -900,14 +906,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -918,7 +924,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -936,14 +942,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -954,7 +960,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -972,14 +978,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -990,7 +996,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1008,14 +1014,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1026,7 +1032,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1044,14 +1050,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1062,7 +1068,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1080,14 +1086,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1098,7 +1104,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1116,14 +1122,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1134,7 +1140,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1152,14 +1158,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1170,7 +1176,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1188,14 +1194,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1206,7 +1212,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1224,14 +1230,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1242,7 +1248,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1260,14 +1266,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1278,7 +1284,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1296,14 +1302,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1314,7 +1320,7 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
     "resource_id": "2afc7056-65a6-11e1-a475-fefdb24fbd4d",
-    "_id": "2afc73bc-65a6-11e1-a475-fefdb24fbd4d",
+    "_id": "6c00c732-65bf-11e1-9786-fefdb24fbd4d",
     "name": "toaster_flap.json",
     "subasset_files": [],
     "subtype": "model",
@@ -1332,14 +1338,14 @@ pc.content.data["2afc7056-65a6-11e1-a475-fefdb24fbd4d"] = {
 };
 pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
     "resource_id": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",
-    "_id": "231acba8-65a6-11e1-9e6c-fefdb24fbd4d",
+    "_id": "1873b790-65c0-11e1-8d15-fefdb24fbd4d",
     "name": "toaster.json",
-    "subasset_files": [],
+    "subasset_files": ["a893b224-65bd-11e1-886d-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "2d4b241e-6570-11e1-a9e3-fefdb24fbd4d",
         "_id": "2d4b20f4-6570-11e1-a9e3-fefdb24fbd4d",    
-        "hash": "604884c77b5172f30086182cba8bbbdc",
+        "hash": "967c5aa188bac87923e222eb0ac8c5b8",
         "exported": true,
         "url": "assets/will/arthacksf/2d/2d369d78-6570-11e1-a9e3-fefdb24fbd4d/toaster.json",    
         "asset": "2d369d78-6570-11e1-a9e3-fefdb24fbd4d",    
@@ -1350,14 +1356,14 @@ pc.content.data["2d369d78-6570-11e1-a9e3-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1368,14 +1374,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1386,14 +1392,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1404,14 +1410,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1422,14 +1428,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1440,14 +1446,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1458,14 +1464,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1476,14 +1482,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1494,14 +1500,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1512,14 +1518,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1530,14 +1536,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1548,14 +1554,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1566,14 +1572,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1584,14 +1590,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1602,14 +1608,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1620,14 +1626,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1638,14 +1644,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1656,14 +1662,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1674,14 +1680,14 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
@@ -1692,17 +1698,53 @@ pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
 };
 pc.content.data["e67bd748-6585-11e1-ba9d-fefdb24fbd4d"] = {
     "resource_id": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",
-    "_id": "e67bda04-6585-11e1-ba9d-fefdb24fbd4d",
+    "_id": "f053944a-65c1-11e1-a991-fefdb24fbd4d",
     "name": "toast.json",
-    "subasset_files": [],
+    "subasset_files": ["cb13ed10-65c1-11e1-ab97-fefdb24fbd4d"],
     "subtype": "model",
     "file": {
         "resource_id": "e68c8aa2-6585-11e1-ba9d-fefdb24fbd4d",
         "_id": "e68c878c-6585-11e1-ba9d-fefdb24fbd4d",    
-        "hash": "93d538596036fd1fccb1d8b04ed0af47",
+        "hash": "cd5d1742db06c17141596132718f99f9",
         "exported": true,
         "url": "assets/will/arthacksf/e6/e67bd748-6585-11e1-ba9d-fefdb24fbd4d/toast.json",    
         "asset": "e67bd748-6585-11e1-ba9d-fefdb24fbd4d",    
+        "type": "file",    
+        "subtype": "model",    
+    },
+    "type": "asset"
+};
+pc.content.data["7b571b1c-6594-11e1-b889-fefdb24fbd4d"] = {
+    "resource_id": "7b571b1c-6594-11e1-b889-fefdb24fbd4d",
+    "_id": "87cc8f9c-65cd-11e1-a1a6-fefdb24fbd4d",
+    "name": "city.json",
+    "subasset_files": ["7b7a85a2-6594-11e1-b889-fefdb24fbd4d", "7b87b088-6594-11e1-b889-fefdb24fbd4d", "7b94d718-6594-11e1-b889-fefdb24fbd4d", "7ba230e8-6594-11e1-b889-fefdb24fbd4d", "7baf53e0-6594-11e1-b889-fefdb24fbd4d", "7bbc8164-6594-11e1-b889-fefdb24fbd4d", "7bc9c25c-6594-11e1-b889-fefdb24fbd4d", "7bd6d320-6594-11e1-b889-fefdb24fbd4d", "7be422dc-6594-11e1-b889-fefdb24fbd4d", "7bf15858-6594-11e1-b889-fefdb24fbd4d", "7bfec39e-6594-11e1-b889-fefdb24fbd4d", "7c0bc968-6594-11e1-b889-fefdb24fbd4d", "7c18ca32-6594-11e1-b889-fefdb24fbd4d", "7c2615ac-6594-11e1-b889-fefdb24fbd4d", "7c33889a-6594-11e1-b889-fefdb24fbd4d", "7c40da54-6594-11e1-b889-fefdb24fbd4d", "7c4e3c94-6594-11e1-b889-fefdb24fbd4d", "7c5b6c98-6594-11e1-b889-fefdb24fbd4d", "7c689fb2-6594-11e1-b889-fefdb24fbd4d", "7c75ba12-6594-11e1-b889-fefdb24fbd4d", "7c82d59e-6594-11e1-b889-fefdb24fbd4d", "7c900c6e-6594-11e1-b889-fefdb24fbd4d", "7c9d32b8-6594-11e1-b889-fefdb24fbd4d", "7caa6bae-6594-11e1-b889-fefdb24fbd4d", "7cb7bcb4-6594-11e1-b889-fefdb24fbd4d", "7cc4e90c-6594-11e1-b889-fefdb24fbd4d", "7cd230a8-6594-11e1-b889-fefdb24fbd4d", "7cdf56b6-6594-11e1-b889-fefdb24fbd4d", "7cecba7c-6594-11e1-b889-fefdb24fbd4d", "7cf9dbd0-6594-11e1-b889-fefdb24fbd4d", "7d073f14-6594-11e1-b889-fefdb24fbd4d", "7d148c1e-6594-11e1-b889-fefdb24fbd4d", "7d21aaa2-6594-11e1-b889-fefdb24fbd4d", "7d2ec048-6594-11e1-b889-fefdb24fbd4d", "7d3bf146-6594-11e1-b889-fefdb24fbd4d", "7d491a74-6594-11e1-b889-fefdb24fbd4d", "7d5645be-6594-11e1-b889-fefdb24fbd4d", "7d63667c-6594-11e1-b889-fefdb24fbd4d", "7a7f61fa-65b1-11e1-8a32-fefdb24fbd4d", "e2be3fb2-65c9-11e1-b0d6-fefdb24fbd4d", "e3166656-65c9-11e1-b0d6-fefdb24fbd4d", "e35041aa-65c9-11e1-b0d6-fefdb24fbd4d", "e3e7a89c-65c9-11e1-b0d6-fefdb24fbd4d", "e49ab3ba-65c9-11e1-b0d6-fefdb24fbd4d", "e4ed9198-65c9-11e1-b0d6-fefdb24fbd4d", "e53230a0-65c9-11e1-b0d6-fefdb24fbd4d", "e540cf3e-65c9-11e1-b0d6-fefdb24fbd4d"],
+    "subtype": "model",
+    "file": {
+        "resource_id": "7b6b95f6-6594-11e1-b889-fefdb24fbd4d",
+        "_id": "7b6b92ea-6594-11e1-b889-fefdb24fbd4d",    
+        "hash": "c3bcda676636d686061fcb5c1b94f326",
+        "exported": true,
+        "url": "assets/will/arthacksf/7b/7b571b1c-6594-11e1-b889-fefdb24fbd4d/city.json",    
+        "asset": "7b571b1c-6594-11e1-b889-fefdb24fbd4d",    
+        "type": "file",    
+        "subtype": "model",    
+    },
+    "type": "asset"
+};
+pc.content.data["7b571b1c-6594-11e1-b889-fefdb24fbd4d"] = {
+    "resource_id": "7b571b1c-6594-11e1-b889-fefdb24fbd4d",
+    "_id": "87cc8f9c-65cd-11e1-a1a6-fefdb24fbd4d",
+    "name": "city.json",
+    "subasset_files": ["7b7a85a2-6594-11e1-b889-fefdb24fbd4d", "7b87b088-6594-11e1-b889-fefdb24fbd4d", "7b94d718-6594-11e1-b889-fefdb24fbd4d", "7ba230e8-6594-11e1-b889-fefdb24fbd4d", "7baf53e0-6594-11e1-b889-fefdb24fbd4d", "7bbc8164-6594-11e1-b889-fefdb24fbd4d", "7bc9c25c-6594-11e1-b889-fefdb24fbd4d", "7bd6d320-6594-11e1-b889-fefdb24fbd4d", "7be422dc-6594-11e1-b889-fefdb24fbd4d", "7bf15858-6594-11e1-b889-fefdb24fbd4d", "7bfec39e-6594-11e1-b889-fefdb24fbd4d", "7c0bc968-6594-11e1-b889-fefdb24fbd4d", "7c18ca32-6594-11e1-b889-fefdb24fbd4d", "7c2615ac-6594-11e1-b889-fefdb24fbd4d", "7c33889a-6594-11e1-b889-fefdb24fbd4d", "7c40da54-6594-11e1-b889-fefdb24fbd4d", "7c4e3c94-6594-11e1-b889-fefdb24fbd4d", "7c5b6c98-6594-11e1-b889-fefdb24fbd4d", "7c689fb2-6594-11e1-b889-fefdb24fbd4d", "7c75ba12-6594-11e1-b889-fefdb24fbd4d", "7c82d59e-6594-11e1-b889-fefdb24fbd4d", "7c900c6e-6594-11e1-b889-fefdb24fbd4d", "7c9d32b8-6594-11e1-b889-fefdb24fbd4d", "7caa6bae-6594-11e1-b889-fefdb24fbd4d", "7cb7bcb4-6594-11e1-b889-fefdb24fbd4d", "7cc4e90c-6594-11e1-b889-fefdb24fbd4d", "7cd230a8-6594-11e1-b889-fefdb24fbd4d", "7cdf56b6-6594-11e1-b889-fefdb24fbd4d", "7cecba7c-6594-11e1-b889-fefdb24fbd4d", "7cf9dbd0-6594-11e1-b889-fefdb24fbd4d", "7d073f14-6594-11e1-b889-fefdb24fbd4d", "7d148c1e-6594-11e1-b889-fefdb24fbd4d", "7d21aaa2-6594-11e1-b889-fefdb24fbd4d", "7d2ec048-6594-11e1-b889-fefdb24fbd4d", "7d3bf146-6594-11e1-b889-fefdb24fbd4d", "7d491a74-6594-11e1-b889-fefdb24fbd4d", "7d5645be-6594-11e1-b889-fefdb24fbd4d", "7d63667c-6594-11e1-b889-fefdb24fbd4d", "7a7f61fa-65b1-11e1-8a32-fefdb24fbd4d", "e2be3fb2-65c9-11e1-b0d6-fefdb24fbd4d", "e3166656-65c9-11e1-b0d6-fefdb24fbd4d", "e35041aa-65c9-11e1-b0d6-fefdb24fbd4d", "e3e7a89c-65c9-11e1-b0d6-fefdb24fbd4d", "e49ab3ba-65c9-11e1-b0d6-fefdb24fbd4d", "e4ed9198-65c9-11e1-b0d6-fefdb24fbd4d", "e53230a0-65c9-11e1-b0d6-fefdb24fbd4d", "e540cf3e-65c9-11e1-b0d6-fefdb24fbd4d"],
+    "subtype": "model",
+    "file": {
+        "resource_id": "7b6b95f6-6594-11e1-b889-fefdb24fbd4d",
+        "_id": "7b6b92ea-6594-11e1-b889-fefdb24fbd4d",    
+        "hash": "c3bcda676636d686061fcb5c1b94f326",
+        "exported": true,
+        "url": "assets/will/arthacksf/7b/7b571b1c-6594-11e1-b889-fefdb24fbd4d/city.json",    
+        "asset": "7b571b1c-6594-11e1-b889-fefdb24fbd4d",    
         "type": "file",    
         "subtype": "model",    
     },

@@ -23,12 +23,12 @@ function buildFlag(){
 	whereAreWe.flag = "http://www.geognos.com/api/en/countries/flag/"+whereAreWe.cc+".png"
 }
 //This is the function that is called when the location is discovered. 
-function run(){
+var cb = function run(){
 	console.log(whereAreWe)
 }
 
 //this is the function called when the user does not/ cannot use html5 geolocation
-function noGeoLocation(){
+function noGeoLocation(callback){
 	o = {myIp: "324234" }
 	$.ajax({
 		url: 'http://smart-ip.net/geoip-json?callback=fish',
@@ -40,7 +40,7 @@ function noGeoLocation(){
 			whereAreWe.city = data.city
 			buildFlag();
 		},
-		complete: run(),
+		complete: callback,
 		error: function(error){
 			console.log(error);
 
@@ -54,7 +54,7 @@ function noGeoLocation(){
 //findMe() returns the user
 //findMe(true) //returns a random country
 //findMe("IN") //returns India.    
-function findMe(fakeIt){
+function findMe(callback, fakeIt){
 	if(fakeIt===undefined){
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(
@@ -64,23 +64,23 @@ function findMe(fakeIt){
 					$.ajax({
 						url: 'http://ws.geonames.org/countryCode?lat={lat}&lng={lon}&type=json'.supplant(whereAreWe),
 						dataType: "jsonp",
-						jsonpCallback: "callback",
+						jsonpCallback: "doCallback",
 						success: function(data){
 							whereAreWe.cc = data.countryCode
 							whereAreWe.discoveryMethod = "html5"
 							whereAreWe.country = data.countryName
 							buildFlag();
 						},
-						complete: run(),
+						complete: callback
 					}) 
 				},
 				function(error){
-					noGeoLocation();
+					noGeoLocation(callback);
 					console.log(error)
 				}
 			)
 		}else{
-			noGeoLocation();
+			noGeoLocation(callback);
 		}
 	} else {
 		whereAreWe.discoveryMethod = "fakeIt"
@@ -93,7 +93,8 @@ function findMe(fakeIt){
 		}else{
 			whereAreWe.cc = ccs[Math.round((Math.random()*100000)%ccs.length)]
 		}
-		buildFlag()
+		buildFlag();
+		callback();
 	}
 }
 

@@ -1,8 +1,10 @@
 /**
  * This handles the connection and dropping of websocket connections
  */
+ 
 exports.init = function(app) {
-	var io = require('socket.io').listen(app)
+    var io = require('socket.io').listen(app);
+    var User = require('../user.js');
 	io.set('log level', 1);
 	
 	
@@ -14,26 +16,29 @@ exports.init = function(app) {
 		, 'jsonp-polling'
 	]);
 	
+    var socketPool = [];
+    
+    function fanOut(message, args) {
+        socketPool.forEach( function (user, i, arr) {
+            user.socket(message, args);
+        });
+    }
+    
+	io.sockets.on('connection', function (socket) {    
+        var user; // assosciate a user with each socket connetion
+        
 
-	io.sockets.on('connection', function (socket) {
-		socket.emit('foo');
-		console.log("connection " + socket.id);
-		socket.on('disconnect', function () {
-			console.log('disconnect');
-			//let's wait 2 seconds to see if player reconnects
-			/*
-			setTimeout(function(){
-				console.log("Still disconnected? " + socket.connected + " " + socket.connecting);
-				if (!socket.connected && !socket.connecting) {
-					if (socket.partner) {
-						socket.partner.emit("game:end", PARTNER_DISCONNECT);
-					}
-					//disconnectPlayer(socket);
-				}
-			}, 2000);
-			*/
+        socket.on('join', function (userData) {            
+            if (user) return; // already joined
+
+            user = new User(userData);          
+            socketPool[user.id] = user;
+            fanOut('join', user);
+        };
+        
+		socket.on('leave', function (user) {
+            delete socketPool[user.id];
+			fanOut('left', user);
 		});
-		
-
-	});
+    });
 }; 

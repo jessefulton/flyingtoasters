@@ -9,6 +9,9 @@
         // add them to the scene
         window.dataBridge.messageToasterManager("join", {"userid": "foo"});
     });
+    
+    //socket.on('otherJoined', function(msg) { alert(msg); });
+    
     socket.on('leave', function (user) {
         // user is who left, and their info
         // nix their toaster from the scene

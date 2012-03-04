@@ -49,6 +49,7 @@
 	}
 
 	var startScreenSaver = function () {
+		//load bootstrap.js
 	}
 
 	var endScreenSaver = function () {

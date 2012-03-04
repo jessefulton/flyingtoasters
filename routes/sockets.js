@@ -35,6 +35,7 @@ exports.init = function(app) {
         console.log("connected " + socket.id);
 
 		socket.emit('join');
+		//socket.broadcast.emit('otherJoined', "a new person joined");
 
 		socket.on('connectedUsers', function(data, cb) {
 			console.log('received call "connectedUsers"');

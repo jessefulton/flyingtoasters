@@ -1,9 +1,9 @@
 html {
-  background: #000;
+  background: #c0c0c0;
   color: #fff;
 }
 body {
-  font: 12px Helvetica, 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font: 12px Arial, sans-serif;
   margin: 0;
   padding: 0;
   min-width: 760px;

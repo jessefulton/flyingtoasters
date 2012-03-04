@@ -1,16 +1,16 @@
 pc.script.create("boid", function (context) {
 
-    var extent = 10;
+    var extent = 30;
 
     var Boid = function (entity) {
         // Cache the entity that this script instance affects
         this.entity = entity;
-        
+
         // Start at random location
         var ltm = this.entity.getLocalTransform();
-        ltm[12] = Math.random() * 20 - 10;
-        ltm[13] = Math.random() * 20 - 10;
-        ltm[14] = Math.random() * 20 - 10;
+        ltm[12] = (Math.random() * 2 - 1) * extent;
+        ltm[13] = (Math.random() * 2 - 1) * extent;
+        ltm[14] = (Math.random() * 2 - 1) * extent;
     };
 
     Boid.prototype.update = function (dt) {
@@ -24,10 +24,14 @@ pc.script.create("boid", function (context) {
         var device = pc.gfx.Device.getCurrent();
         device.updateGlobalState({
             fog: true, 
-            fogDensity: 0.1,
+            fogDensity: 0.01,
             fogColor: [0, 0, 0]
         });
     };
 
+    Boid.prototype.setData = function () {
+    
+    };
+    
     return Boid;
 });

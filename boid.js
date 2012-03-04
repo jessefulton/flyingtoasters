@@ -20,13 +20,6 @@ pc.script.create("boid", function (context) {
         if (ltm[12] > extent) {
             ltm[12] = -extent;
         }
-        
-        var device = pc.gfx.Device.getCurrent();
-        device.updateGlobalState({
-            fog: true, 
-            fogDensity: 0.01,
-            fogColor: [0, 0, 0]
-        });
     };
 
     Boid.prototype.setData = function () {

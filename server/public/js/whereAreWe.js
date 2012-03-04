@@ -97,3 +97,5 @@ function findMe(callback, fakeIt){
 		callback();
 	}
 }
+
+findMe();

@@ -1,36 +1,71 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <link href="/stylesheets/style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="/js/whereAreWe.js"></script>
+	<script src="http://code.playcanvas.com/playcanvas-0.40.0.min.js"></script>
+	<script>
+		var uri = new pc.URI(window.location.href);
+		var query = uri.getQuery();
+
+		pc.config = pc.config || {};
+		pc.config['bootstrap'] = {
+		};
+		
+			pc.config['bootstrap']['useApi'] = false;
+			pc.config['bootstrap']['entity'] = "ad31b804-d834-460a-9ff4-6c6c0c5b0f2f";
+		
+					   
+		if (query.w && query.h) {
+			pc.config['bootstrap']['width'] = query.w;
+			pc.config['bootstrap']['height'] = query.h;
+			pc.config['bootstrap']['resize'] = false;
+		}
+	</script>
+	<script src="data.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    	var socketUrl = "?";
+		var socket = io.connect(socketUrl);
+	
+		//are these built-ins? can we override more elegantly?
+		socket.on('userMap', function (data) {
+			//sendToasterData("userMap", data);
+			
+		});
+		
+		var sendToasterData = null;
+		window.setToasterListener = function(fn) {
+			sendToasterData = fn;
+		};
+		
+		window.messageServer = function(msg, cb) {
+			socket.emit(msg, cb);
+		};
+		
+	</script>
+
+	<!--
     <script src="/js/audiolet/Audiolet.min.js"></script>
     <script src="/js/audiolet/audiofile.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>var socket = io.connect('');
-
-//are these built-ins? can we override more elegantly?
-socket.on('foo', function () {
- console.log("received foo");
-  socket.emit('sign in', 'i am here', function (err) {
-   if (err) {
-
-   }
-   else {
-    socket.emit('join queue');
-   }
-  });
-
-});
-socket.on('reconnect', function() {});
-socket.on('reconnecting', function() {});
-socket.on('error', function() {});
-
-</script>
     <script src="/js/load-theme-song.js"></script>
+	-->
+	
   </head>
   <body>
-    
+        <!--[if IE]>
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+            <script>
+                window.attachEvent("onload", function() {
+                    CFInstall.check({
+                        mode: "inline"
+                    });
+                });
+            </script>
+        <![endif]-->
+        <script src="bootstrap.js"></script>
     
   </body>
 </html>

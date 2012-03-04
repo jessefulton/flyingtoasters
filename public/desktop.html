@@ -48,62 +48,7 @@
     <div id="bsod"><div class="bottom"></div></div>
     
     <script>
-    	var _LOADED = false;
-		window.playCanvasStatus = function(s) {
-			if (s >= 100) {
-				_LOADED = true;
-			}
-		}
-		
-		$(function() {
-			var nayGl = function() {
-				$(document.body).addClass("nogl");
-			}
-			
-			var initDesktop = function() {
-				$("#about-icon").on('click', function() {
-					$("#about").show();
-				});
-				$("#about .OK, #about .close").on('click', function() {
-					$("#about").hide();
-				});
-				$(document.body).addClass("loaded");
 
-			}
-
-			var loadScene = function(cb) {
-				jQuery.getScript("/bootstrap.js");
-				var boot = window.setInterval(function() {
-					if (_LOADED) {
-						window.clearInterval(boot);
-						cb();
-						console.log('\n');
-						console.log('**************************');
-						console.log('loaded');
-						console.log('**************************');
-						console.log('\n');
-					}
-				}, 250);
-			}
-			
-			var yayGl = function() {
-				$(document.body).addClass("webgl");	
-				//loadScene(initDesktop);
-				window.setTimeout(function() {loadScene(initDesktop);}, 1000);
-			}
-		
-		
-			//Feature test WebGL
-			//via https://github.com/senchalabs/philogl/blob/master/src/webgl.js#L384-395			
-			try {
-				var canvas = document.createElement('canvas');
-				var hasGl = !!(window.WebGLRenderingContext && (canvas.getContext('webgl') || canvas.getContext('experimental-webgl')));
-				if (hasGl) { yayGl(); }
-				else { nayGl(); }
-			} catch(e) {
-				nayGl();
-			}
-		});
     </script>
   </body>
 </html>

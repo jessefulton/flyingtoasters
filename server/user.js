@@ -12,5 +12,5 @@ function User(data) {
 }
 
 exports = {
-    'User': User;
+    'User': User
 }

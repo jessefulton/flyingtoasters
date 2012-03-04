@@ -34,7 +34,7 @@ exports.init = function(app) {
             user = new User(userData);          
             socketPool[user.id] = user;
             fanOut('join', user);
-        };
+        });
         
 		socket.on('leave', function (user) {
             delete socketPool[user.id];
